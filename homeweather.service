@@ -1,0 +1,11 @@
+[Unit]
+Description=homeweather service to upload probe data
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/homeweather start 28-80000026aa9f station_2 1800
+ExecStop=/usr/local/bin/homeweather stop
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
