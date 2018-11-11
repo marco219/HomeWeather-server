@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 }
 
 $rows = Array();
-$sql  = 'SELECT * FROM '.$station_id.' order by id desc';
+$sql  = 'SELECT * FROM '.$station_id.' order by id desc limit 100';
 
 $result = $conn->query($sql);
 
